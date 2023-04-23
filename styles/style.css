@@ -1,0 +1,45 @@
+html {
+    /*当然可以直接在html的head中全局地定义*/
+    
+    /* px 表示“像素（pixels）”: 基础字号为 10 像素 */
+    font-size: 1px;
+    /* Google fonts 输出的 CSS */
+    font-family: 'Open Sans', sans-serif;      
+    }
+html {
+    background-color: rgb(216, 206, 206);
+    }
+body {
+    margin: 5 0;
+    border: 5px solid black;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    }      
+h1, h2, h3, h4, h5 {
+    margin: 10px 0;
+    padding: 0 0;
+    background-color:#c2d4e5;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    }
+li {
+    font-size: 15px;
+    /* line-height 后面可以跟不同的参数，如果是数字，就是当前字体大小乘上数字 */
+    /*line-height: 1;*/
+    /*letter-spacing: 1px;*/
+    }  
+button {
+    padding: auto 10px auto 0;
+}
+img.ic0 {
+    /*display: block;*/
+    padding: auto auto auto 0;
+    width: 200px;
+    height: auto;
+    }
+img.ic1 {
+    margin: 10px auto;
+    width: 200px;
+    }
+  
