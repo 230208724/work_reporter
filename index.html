@@ -1,44 +1,42 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-     <!-- 
-    annotation here
-     -->
     <title>WorkReporter</title> 
     <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet">
-    <script src="scripts/main.js" defer></script>
+    <link href="./styles/style.css" rel="stylesheet">    
+    <!-- Include jspdf library for generating PDF -->
+	  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.min.js" defer></script> -->
+    <!-- <script src="./scripts/jspdf.umd.min.js" type="module" defer></script> -->
+    <!-- <script src="http://localhost:8080/scripts/main.js" type="module" defer></script> -->
+    <script src="./scripts/main.js" defer></script>
+    <!--  defer,rsync  -->
   </head>
   <body>
-    <img src="images/icon.jpg" alt="Work Reporter" class="ic0">
-    <button>switch user</button>
+    <img src="./images/icon.jpg" alt="WorkReporter" class="IconImage" id="IconImage">
+    <button class="UserButton"id="UserButton">李莹鑫-20230404</button>
     
     <h1>step1: selecting modules and adding description</h1>
     <p>There are 5 modules to be selected:</p>
-    <img src="images/EnjineeringProject.png" alt="EnjineeringProject" class="ic1">
-    <img src="images/ProductionProject.png" alt="ProductionProject" class="ic1">
-    <img src="images/Survey.png" alt="Survey" class="ic1">
-    <img src="images/Exchange.png" alt="Exchange" class="ic1">
-    <img src="images/TranscationService.png" alt="Transcation/Service" class="ic1">
+    <img src="./images/EnjineeringProject.png" alt="EnjineeringProject" class="ModuleImage" id="EnjineerModuleImage">
+    <img src="./images/ProductionProject.png" alt="ProductionProject" class="ModuleImage" id="ProductModuleImage">
+    <img src="./images/Survey.png" alt="Survey" class="ModuleImage" id="SurveyModuleImage">
+    <img src="./images/Exchange.png" alt="Exchange" class="ModuleImage" id="ExchangeModuleImage">
+    <img src="./images/TranscationService.png" alt="Service" class="ModuleImage" id="ServiceModuleImage">
     
     <h2>step2: editing selected modules</h2>
     <p>There are your modules:</p>
-    <ul>
-      <li>Enjineering project edit delete</li>
-      <li>Production project edit delete</li>
-      <li>Survey edit delete</li>
-      <li>Exchange edit delete</li>
-      <li>Transcation and Service edit delete</li>
-    </ul>    
+    <div id="MyModules">
+    </div> 
     
     <h3>step3: review the report and export it</h3>
-    <p>WorkReporter review name export</p>
-
+    <p id="hint">李莹鑫-20230404's WorkReport</p>
+    <button class="ReviewButton" id="ReviewButton">review</button> <button class="ExportButton" id="ExportButton">export</button> 
+    <!-- style="display: none;" -->
+    <!-- onclick="reviewData()" -->
     <h4>Notes</h4>
-    <p>WorReporter github source can be found <a href="https://github.com/230208724">here</a></p>
-
-    <h5>Dear User</h5>
+    <p>WorReporter github source can be found <a href="https://github.com/230208724">here</a></p> 
     <p>If u have any question, please contact 230208724@seu.edu.cn</p>
   </body>
-</html>
+</html> 

@@ -1,9 +1,6 @@
 html {
     /*当然可以直接在html的head中全局地定义*/
-    
-    /* px 表示“像素（pixels）”: 基础字号为 10 像素 */
     font-size: 1px;
-    /* Google fonts 输出的 CSS */
     font-family: 'Open Sans', sans-serif;      
     }
 html {
@@ -15,7 +12,7 @@ body {
     padding: 10px 10px 10px 10px;
     background-color: white;
     }      
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
     margin: 10px 0;
     padding: 0 0;
     background-color:#c2d4e5;
@@ -30,16 +27,27 @@ li {
     /*letter-spacing: 1px;*/
     }  
 button {
-    padding: auto 10px auto 0;
+    margin: 0 0;
+    padding: 0 0 0 0;
 }
-img.ic0 {
+.UserButton {
+    border-style: none;
+    font-size: 15px;
+    background-color: white;
+}
+
+img.ModuleImage {
     /*display: block;*/
     padding: auto auto auto 0;
     width: 200px;
     height: auto;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: black;
     }
-img.ic1 {
-    margin: 10px auto;
-    width: 200px;
+img.IconImage {
+    margin: 0 0;
+    padding: 0 0 0 0;
+    height: 10px;
     }
   

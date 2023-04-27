@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EnjineeringProject</title>
+	<script>
+		let items = ['目标','项目位置','上周残留问题','本周实现功能','效果','问题','分析',
+		'结论','项目当前进度','下周计划实现','未来计划实现','todo'];
+		function submitData() {
+			// Save key-value pairs in session/local storage
+			for (let i = 0; i < items.length ; i++) {
+				localStorage.setItem(localStorage.getItem('curprojectnumber')+items[i], document.getElementById(items[i]).value);
+			}
+			//window.opener.document.getElementById("ReviewButton").style.display = "inline"; // Show review button on parent page
+			window.close(); // Close write page
+		}
+	</script>
+</head>
+<body>
+	<h1>current project</h1>
+	<div id="items">
+	</div>
+	<button onclick="submitData()">submit</button>
+</body>
+<script>
+	let head = document.querySelector('h1');
+	head.textContent = localStorage.getItem('curprojectdes')
+
+	let itemdiv = document.querySelector('div');
+	for(let i = 0; i < items.length ; i++) {
+        let l = document.createElement('label');
+		l.textContent = items[i]
+		itemdiv.appendChild(l);
+    	let inp = document.createElement('input');
+		inp.setAttribute('type','text')
+		inp.setAttribute('id',items[i])
+		itemdiv.appendChild(inp);
+		let p = document.createElement('p');
+		p.textContent = '\n'
+		itemdiv.appendChild(p);
+    } 
+</script>
+</html>
